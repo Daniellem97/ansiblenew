@@ -1,0 +1,17 @@
+
+- name: Create a test file
+  hosts: example.com
+  vars:
+    ansible_user: config
+    ansible_become: true
+    ansible_become_method: sudo
+    ansible_become_user: root
+    ansible_remote_tmp: /tmp/.testansible/tmp
+  tasks:
+    - name: Create a test file on the hosts
+      ansible.builtin.file:
+        path: /root/testfile8675311.txt
+        state: touch
+        owner: root
+        group: root
+        mode: "0640"
