@@ -1,0 +1,5 @@
+[test]
+example.com
+
+[test:vars]
+ansible_remote_tmp=/tmp/.testansible/tmp
