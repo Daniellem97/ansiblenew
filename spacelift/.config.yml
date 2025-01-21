@@ -1,0 +1,4 @@
+version: "1"
+stack_defaults:
+    environment:
+        ANSIBLE_CONFIG: /mnt/workspace/source/ansible.cfg
